@@ -246,7 +246,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
-ISC License - see LICENSE file for details
+The Unlicense - see LICENSE file for details
 
 ## 🙏 Acknowledgments
 
