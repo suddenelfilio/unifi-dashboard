@@ -133,10 +133,8 @@ All endpoints require the `X-API-KEY` header.
 Pull the latest image from GitHub Container Registry:
 
 ```bash
-docker pull ghcr.io/OWNER/REPO:latest
+docker pull ghcr.io/suddenelfilio/unifi-dashboard:latest
 ```
-
-Replace `OWNER/REPO` with your GitHub username and repository name.
 
 ### Environment Variables
 
@@ -203,7 +201,7 @@ Update your `docker-compose.yml` to use the pre-built image:
 ```yaml
 services:
   unifi-dashboard:
-    image: ghcr.io/OWNER/REPO:latest  # Replace with your image
+    image: ghcr.io/suddenelfilio/unifi-dashboard:latest
     # ... rest of configuration
 ```
 
@@ -215,7 +213,7 @@ docker run -d \
   -e UNIFI_API_KEY=your-api-key \
   -e UNIFI_API_URL=https://your-unifi-host.com/proxy/network/integration/v1 \
   --name unifi-dashboard \
-  ghcr.io/OWNER/REPO:latest
+  ghcr.io/suddenelfilio/unifi-dashboard:latest
 ```
 
 ### Access the Dashboard

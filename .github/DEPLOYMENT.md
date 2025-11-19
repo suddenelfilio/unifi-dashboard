@@ -18,13 +18,13 @@ Images are tagged as follows:
 
 ```bash
 # Pull latest version
-docker pull ghcr.io/YOUR_USERNAME/ui-monitor:latest
+docker pull ghcr.io/suddenelfilio/unifi-dashboard:latest
 
 # Pull specific version
-docker pull ghcr.io/YOUR_USERNAME/ui-monitor:v1.0.0
+docker pull ghcr.io/suddenelfilio/unifi-dashboard:v1.0.0
 
 # Pull specific commit
-docker pull ghcr.io/YOUR_USERNAME/ui-monitor:sha-abc1234
+docker pull ghcr.io/suddenelfilio/unifi-dashboard:sha-abc1234
 ```
 
 ### Making Images Public
@@ -48,7 +48,7 @@ To pull private images:
 echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
 
 # Pull the image
-docker pull ghcr.io/YOUR_USERNAME/ui-monitor:latest
+docker pull ghcr.io/suddenelfilio/unifi-dashboard:latest
 ```
 
 ### Creating Releases
@@ -149,7 +149,7 @@ act push
 version: '3.8'
 services:
   unifi-dashboard:
-    image: ghcr.io/YOUR_USERNAME/ui-monitor:latest
+    image: ghcr.io/suddenelfilio/unifi-dashboard:latest
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -182,7 +182,7 @@ spec:
     spec:
       containers:
       - name: dashboard
-        image: ghcr.io/YOUR_USERNAME/ui-monitor:latest
+        image: ghcr.io/suddenelfilio/unifi-dashboard:latest
         ports:
         - containerPort: 3000
         env:
@@ -213,7 +213,7 @@ spec:
 version: '3.8'
 services:
   unifi-dashboard:
-    image: ghcr.io/YOUR_USERNAME/ui-monitor:latest
+    image: ghcr.io/suddenelfilio/unifi-dashboard:latest
     container_name: unifi-dashboard
     restart: unless-stopped
     ports:
