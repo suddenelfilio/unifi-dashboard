@@ -19,8 +19,25 @@ const sitesContainer = document.getElementById('sitesContainer');
 const siteFilterContainer = document.getElementById('siteFilterContainer');
 const autoRefreshToggle = document.getElementById('autoRefreshToggle');
 const refreshCountdown = document.getElementById('refreshCountdown');
+const themeToggle = document.getElementById('themeToggle');
 const muteToggle = document.getElementById('muteToggle');
 const notificationContainer = document.getElementById('notificationContainer');
+
+// Theme Management
+function initializeTheme() {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.checked = true;
+    }
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
 
 // Event Listeners
 autoRefreshToggle.addEventListener('change', (e) => {
@@ -31,11 +48,14 @@ autoRefreshToggle.addEventListener('change', (e) => {
     }
 });
 
+themeToggle.addEventListener('change', toggleTheme);
+
 muteToggle.addEventListener('change', (e) => {
     isSoundMuted = e.target.checked;
 });
 
 // Initialize
+initializeTheme();
 loadData();
 startAutoRefresh();
 

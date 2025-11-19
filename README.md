@@ -228,17 +228,6 @@ Or from another machine:
 http://<your-server-ip>:3000
 ```
 
-## 📸 Screenshots
-
-### Main Dashboard
-View all sites at a glance with real-time stats and health indicators.
-
-### Site Details
-Expandable site cards showing devices and connected clients.
-
-### Notifications
-Live alerts for client connections with sound and visual feedback.
-
 ## 🛠️ Technology Stack
 
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
