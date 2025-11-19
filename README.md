@@ -128,6 +128,16 @@ All endpoints require the `X-API-KEY` header.
 
 ## Docker Deployment
 
+### Pre-built Images
+
+Pull the latest image from GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/OWNER/REPO:latest
+```
+
+Replace `OWNER/REPO` with your GitHub username and repository name.
+
 ### Environment Variables
 
 Create a `.env` file in the project root (copy from `.env.example`):
@@ -184,6 +194,28 @@ docker-compose logs -f
 
 # Stop the service
 docker-compose down
+```
+
+### Using GitHub Container Registry Image
+
+Update your `docker-compose.yml` to use the pre-built image:
+
+```yaml
+services:
+  unifi-dashboard:
+    image: ghcr.io/OWNER/REPO:latest  # Replace with your image
+    # ... rest of configuration
+```
+
+Or run directly:
+
+```bash
+docker run -d \
+  -p 3000:3000 \
+  -e UNIFI_API_KEY=your-api-key \
+  -e UNIFI_API_URL=https://your-unifi-host.com/proxy/network/integration/v1 \
+  --name unifi-dashboard \
+  ghcr.io/OWNER/REPO:latest
 ```
 
 ### Access the Dashboard
