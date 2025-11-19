@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.DS_Store
+*.log
+.env
+.git
+.gitignore
+README.md
+getsites.json
+getdevices.json
+getclients.json
