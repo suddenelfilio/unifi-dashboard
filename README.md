@@ -4,7 +4,6 @@
 
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 [![Node.js](https://img.shields.io/badge/node.js-20.x-green.svg)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 
 ## 📊 Overview
 
