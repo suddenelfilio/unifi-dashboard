@@ -1,5 +1,5 @@
 # Use specific Node.js LTS image with latest Alpine for security patches
-FROM node:20-alpine3.20
+FROM node:current-alpine3.21
 
 # Set working directory
 WORKDIR /app

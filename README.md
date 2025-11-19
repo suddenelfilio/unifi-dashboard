@@ -1,22 +1,49 @@
-# UniFi Network Dashboard
+# Astro Rent Dashboard - UniFi Network Monitor
 
-A lightweight dashboard for monitoring UniFi network sites, devices, and clients.
+> A real-time monitoring dashboard for UniFi network infrastructure with automatic refresh, client notifications, and Docker support.
 
-## Features
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
+[![Node.js](https://img.shields.io/badge/node.js-20.x-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 
-- **Overview Dashboard**: View aggregated stats across all sites
-  - Total sites count
-  - Total devices with online/offline breakdown
-  - Connected clients count
-  - Network health percentage
+## 📊 Overview
 
-- **Site Cards**: Individual cards for each site showing:
-  - Total devices and clients
-  - Online/offline device counts
-  - List of devices with status
-  - List of connected clients
+A beautiful, real-time dashboard for monitoring UniFi network infrastructure across multiple sites. Built with vanilla JavaScript and Node.js, featuring automatic data refresh, sound notifications, and a responsive design.
 
-- **BFF Proxy**: Lightweight Express server to handle CORS restrictions
+Perfect for managing rental properties, business locations, or any multi-site UniFi deployment.
+
+## ✨ Key Features
+
+### 📈 Real-Time Monitoring
+- **Auto-refresh** every 15 seconds with countdown timer
+- **Site availability inference** - automatic detection based on device status
+- **Network health metrics** - instant overview of your infrastructure
+- **Collapsible site details** - focus on what matters
+
+### 🔔 Smart Notifications
+- **Visual alerts** for client connections/disconnections
+- **Sound notifications** with mute toggle
+- **Flash animations** on stat cards for attention
+- **Persistent notification history** during session
+
+### 🎛️ Flexible Filtering
+- **Selective site viewing** - show/hide specific locations
+- **Quick filters** - All, None, or Online Only
+- **Collapsible filter panel** - maximize screen space
+- **Site selection persistence** across refreshes
+
+### 📱 Modern Interface
+- **Responsive design** - works on desktop, tablet, and mobile
+- **Dark mode friendly** styling
+- **Smooth animations** and transitions
+- **Status-based color coding** for quick identification
+
+### 🐳 Production Ready
+- **Docker support** with optimized Alpine image
+- **Environment-based configuration** for security
+- **Health checks** and proper signal handling
+- **Non-root container** execution for security
+- **BFF proxy** to handle CORS restrictions
 
 ## Setup
 
@@ -170,3 +197,61 @@ Or from another machine:
 ```
 http://<your-server-ip>:3000
 ```
+
+## 📸 Screenshots
+
+### Main Dashboard
+View all sites at a glance with real-time stats and health indicators.
+
+### Site Details
+Expandable site cards showing devices and connected clients.
+
+### Notifications
+Live alerts for client connections with sound and visual feedback.
+
+## 🛠️ Technology Stack
+
+- **Frontend**: Vanilla JavaScript, HTML5, CSS3
+- **Backend**: Node.js, Express.js
+- **Container**: Docker, Docker Compose
+- **Security**: dotenv for secrets, non-root execution
+- **API**: UniFi Network Application Integration
+
+## 🎯 Use Cases
+
+- **Property Management**: Monitor network across rental properties
+- **Business Locations**: Track connectivity at multiple offices
+- **IT Operations**: Dashboard for network operations center
+- **Client Management**: Monitor guest and customer connections
+- **Troubleshooting**: Quick identification of offline devices
+
+## 🔒 Security Features
+
+- Environment variable based configuration
+- API key never exposed to frontend
+- Non-root Docker container execution
+- CORS-safe BFF proxy pattern
+- Git-safe with proper .gitignore
+
+## 📋 Requirements
+
+- Node.js 20.x or higher
+- UniFi Network Application with API access
+- Valid UniFi API key
+- Docker (optional, for containerized deployment)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+ISC License - see LICENSE file for details
+
+## 🙏 Acknowledgments
+
+Built for Astro Rent network infrastructure monitoring.
+
+## 📧 Support
+
+For issues and questions, please open an issue on GitHub.
