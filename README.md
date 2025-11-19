@@ -1,4 +1,4 @@
-# Astro Rent Dashboard - UniFi Network Monitor
+# Unifi Dashboard - UniFi Network Monitor
 
 > A real-time monitoring dashboard for UniFi network infrastructure with automatic refresh, client notifications, and Docker support.
 
@@ -97,7 +97,7 @@ Perfect for managing rental properties, business locations, or any multi-site Un
        │ HTTP requests to /api/*
        │
 ┌──────▼──────┐
-│ Express BFF │  ← Handles CORS
+│ Express BFF │ 
 │  (server.js)│
 └──────┬──────┘
        │
